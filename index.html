@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>简易版 16型人格测试</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>16型人格测试</h1>
+            <p>这是一个简易演示版，共 <span id="total-questions">0</span> 题</p>
+        </header>
+
+        <div id="quiz-box">
+            <div class="progress-bar">
+                <div class="progress-fill" id="progress"></div>
+            </div>
+            <h2 id="question-text">问题加载中...</h2>
+            <div class="options-container">
+                <button class="btn option-btn" id="btn-a" onclick="selectOption('A')">选项 A</button>
+                <button class="btn option-btn" id="btn-b" onclick="selectOption('B')">选项 B</button>
+            </div>
+        </div>
+
+        <div id="result-box" class="hidden">
+            <h2>你的测试结果是：</h2>
+            <div class="result-type" id="mbti-type">----</div>
+            <p id="mbti-desc" class="description"></p>
+            <button class="btn restart-btn" onclick="restartQuiz()">重新测试</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
